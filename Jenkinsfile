@@ -7,9 +7,9 @@ pipeline {
                         echo "hariom"      
                 def buildStatus = currentBuild.result
                 
-                if (buildStatus == 'SUCCESSs') {
+                if (buildStatus == 'SUCCESS') {
                     echo "Build succeeded"
-                    
+                    build 'Maven_proj'
                 } else {
                     echo "Build failed"
                     
