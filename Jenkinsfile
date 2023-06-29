@@ -9,7 +9,7 @@ pipeline {
                 
                 if (buildStatus == 'SUCCESS') {
                     echo "Build succeeded"
-                    build 'Maven_proj'
+                    build 'Test_Automation_Build'
                 } else {
                     echo "Build failed"
                     
