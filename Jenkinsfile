@@ -5,6 +5,15 @@ pipeline {
         stage('Build') {
             steps {
                         echo "hariom"      
+                def buildStatus = currentBuild.result
+                
+                if (buildStatus == 'SUCCESSs') {
+                    echo "Build succeeded"
+                    
+                } else {
+                    echo "Build failed"
+                    
+                }
             }
         }
         
