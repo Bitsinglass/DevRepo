@@ -4,7 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                def buildStatus = currentBuild.result
+                              
+            }
+        }
+        
+    }
+    post {
+        always {
+            script {
+                 def buildStatus = currentBuild.result
                 
                 if (buildStatus == 'SUCCESS') {
                     echo "Build succeeded"
@@ -12,9 +20,7 @@ pipeline {
                 } else {
                     echo "Build failed"
                 }
-                
-            }
+}
         }
-        
     }
 }
