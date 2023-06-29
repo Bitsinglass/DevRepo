@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                build 'maven_proj'
+                build 'Maven_proj'
             }
         }
         
