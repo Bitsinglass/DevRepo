@@ -19,7 +19,7 @@ pipeline {
                     
                 } else {
                     echo "Build failed"
-                    build 'Maven_proj'
+                    
                 }
 }
         }
