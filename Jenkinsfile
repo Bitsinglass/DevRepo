@@ -14,7 +14,7 @@ pipeline {
             script {
                  def buildStatus = currentBuild.result
                 
-                if (buildStatus == 'SUCCESS') {
+                if (buildStatus == 'SUCCESSs') {
                     echo "Build succeeded"
                     
                 } else {
