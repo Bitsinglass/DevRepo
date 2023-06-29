@@ -4,7 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                build 'Maven_proj'
+                def buildStatus = currentBuild.result
+                
+                if (buildStatus == 'SUCCESS') {
+                    echo "Build succeeded"
+                    build 'Maven_proj'
+                } else {
+                    echo "Build failed"
+                }
+                
             }
         }
         
